@@ -8,9 +8,13 @@
 </head>
 <body>
 
+<% if flash[:notice].present? %>
+  <p class="flash-notice"><%= flash[:notice] %></p>
+<% end %> 
 <%= link_to "a list of users", users_path %>  |  
 <%= link_to "a list of products", products_path %>  |
-<%= link_to "add a product", products_new_path %>
+<%= link_to "add a product", new_product_path %>  |
+
 
 <%= yield %>
 
